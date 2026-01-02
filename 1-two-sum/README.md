@@ -39,3 +39,18 @@
 
 <p>&nbsp;</p>
 <strong>Follow-up:&nbsp;</strong>Can you come up with an algorithm that is less than <code>O(n<sup>2</sup>)</code><font face="monospace">&nbsp;</font>time complexity?
+
+MY Solution 1st Solution:
+used two for loops
+checked every combination
+return the index that match the target
+Time Complexity = O(n^2)
+Space Complexity = O(1)
+
+My Optimised Solution:
+traverse through the list,
+for every element compute diff = target - curr
+check if the diff element is available in the map
+if not push the current element with its index
+continue until diff element is found in the map,
+once found return the index of curr and diff
