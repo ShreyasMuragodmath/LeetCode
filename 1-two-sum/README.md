@@ -14,7 +14,7 @@
 <p>if not push the current element with its index</p>
 <p>continue until diff element is found in the map,</p>
 <p>once found return the index of curr and diff</p>
-<p>Time Complexity = O(n^2)</p>
+<p>Time Complexity = O(n)</p>
 <p>Space Complexity = O(1)</p>
 </ul>
 
