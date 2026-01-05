@@ -7,11 +7,6 @@ class Solution(object):
         """
         if len(nums) == 0:
             return 0
-        elif len(nums) == 1:
-            if nums[0] == val:
-                nums.pop()
-                return 0
-            return 1
 
         ptr1, ptr2, count = 0, len(nums)-1, 0
         while(ptr1 != ptr2):
