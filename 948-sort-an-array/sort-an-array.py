@@ -29,7 +29,7 @@ class Solution(object):
                 i += 1
 
         def mergeSort(arr, l, r):
-            if l >= r:
+            if l == r:
                 return
             m = (l + r) // 2
             mergeSort(arr, l, m)
