@@ -6,8 +6,7 @@ class Solution(object):
         
         ans = []
         while(k!=0):
-            res = max(mp, key=mp.get)
-            ans.append(res)
-            mp.pop(res)
+            ans.append(max(mp, key=mp.get))
+            mp.pop(max(mp, key=mp.get))
             k -= 1
         return ans
