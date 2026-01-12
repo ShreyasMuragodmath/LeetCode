@@ -7,6 +7,7 @@ class Solution(object):
         count = 0
         n = len(nums)
         i = 0
+        
         while(i<n):
             if(nums[i] == 2):
                 nums.append(2)
