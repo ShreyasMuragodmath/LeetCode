@@ -5,8 +5,8 @@ class Solution(object):
         prefix = {0:1}
         for n in nums:
             curSum += n
-            diff = curSum - k
-            res += prefix.get(diff, 0)
-            prefix[curSum] = 1 + prefix.get(curSum,0)
+            if curSum-k in prefix:
+                res += prefix[curSum-k]
+            prefix[curSum] = prefix.get(curSum,0) + 1
 
         return res
