@@ -9,12 +9,28 @@ class Solution(object):
         #     nums.insert(0, nums[len(nums)-1])
         #     k -= 1
         #     nums.pop()
-        r = len(nums) - k
+        ## TLE for large array
 
-        while r != 0:
-            nums.append(nums[0])
-            nums.pop(0)
-            r -= 1
+        # r = len(nums) - k
+        # while r != 0:
+        #     nums.append(nums[0])
+        #     nums.pop(0)
+        #     r -= 1
+        ## Slow runtime
+        
+        def reverse_(l,r):
+            while l < r:
+                nums[l],nums[r] = nums[r],nums[l]
+                l += 1
+                r -= 1
+        
+        reverse_(0,len(nums)-1)
+        reverse_(0,k-1)
+        reverse_(k,len(nums)-1)
+
+        
+
+
 
 
         
