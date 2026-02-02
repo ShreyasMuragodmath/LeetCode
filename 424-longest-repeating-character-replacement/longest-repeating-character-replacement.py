@@ -22,7 +22,7 @@ class Solution(object):
             while(r - l + 1) - max_f > k:
                 count[s[l]] -= 1
                 l += 1
-            res = max(res, r - l + 1)
+            res = r - l + 1
         return res
             
             
