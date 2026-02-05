@@ -1,0 +1,27 @@
+# from collections import defaultdict
+class Solution(object):
+    def findClosestElements(self, arr, k, x):
+        """
+        :type arr: List[int]
+        :type k: int
+        :type x: int
+        :rtype: List[int]
+        """
+        if len(arr) == k:
+            return arr
+
+        l = 0
+        r = len(arr) - k
+        while l < r: #binary search
+            m = (l + r) // 2
+            if x - arr[m] > arr[m + k] - x:
+                l = m + 1
+            else:
+                r = m
+        return arr[l: l+k]
+
+
+
+
+        
+        
