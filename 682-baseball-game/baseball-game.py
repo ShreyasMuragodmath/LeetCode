@@ -14,7 +14,12 @@ class Solution(object):
                 stack.append(stack[-1] + stack[-2])
             else:
                 stack.append(int(c))
-        return sum(stack)
+        res = 0
+        while stack:
+            res += stack[-1]
+            stack.pop()
+
+        return res
 
 
 
